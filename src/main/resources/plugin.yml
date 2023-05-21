@@ -1,0 +1,4 @@
+name: NamedVillagers
+version: '${version}'
+main: vitoo.namedvillagers.NamedVillagers
+api-version: 1.19
