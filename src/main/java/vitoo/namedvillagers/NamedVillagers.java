@@ -2,6 +2,7 @@ package vitoo.namedvillagers;
 
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
+import vitoo.namedvillagers.events.NamedVillagersEventHandler;
 
 public final class NamedVillagers extends JavaPlugin {
 
@@ -9,6 +10,6 @@ public final class NamedVillagers extends JavaPlugin {
     public void onEnable() {
         // Plugin startup logic
         Bukkit.getLogger().info("Named Villagers Enabled");
-        new vitoo.namedvillagers.listeners.NamedVillagersEventHandler(this);
+        new NamedVillagersEventHandler(this);
     }
 }

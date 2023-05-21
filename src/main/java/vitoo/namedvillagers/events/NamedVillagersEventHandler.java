@@ -1,4 +1,4 @@
-package vitoo.namedvillagers.listeners;
+package vitoo.namedvillagers.events;
 
 import net.datafaker.Faker;
 import org.bukkit.Bukkit;
@@ -51,7 +51,7 @@ public class NamedVillagersEventHandler implements Listener {
 
         Arrays.stream(entities)
                 .filter(entity -> entity.getType() == EntityType.VILLAGER && entity.getCustomName() == null)
-                .collect(Collectors.toList())
+                .toList()
                 .forEach(entity -> {
                     if (entity.getCustomName() == null) {
                         entity.setCustomName(this.faker.name().firstName());
